@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsere Erinnerungen ❤️</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  color: white;
+  text-align: center;
+}
+
+header {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  width: 180px;
+  height: 180px;
+  background: white;
+  color: black;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Unsere Erinnerungen ❤️</h1>
+<p>Klicke auf ein Bild, um es groß zu sehen</p>
+</header>
+
+<div class="container">
+  <!-- Karten für alle Bilder -->
+  <div class="card" onclick="openModal('img1')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny1.jpg?raw=true"><p>Erinnerung 1</p></div>
+  <div class="card" onclick="openModal('img2')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny2.jpg?raw=true"><p>Erinnerung 2</p></div>
+  <div class="card" onclick="openModal('img3')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny3.jpg?raw=true"><p>Erinnerung 3</p></div>
+  <div class="card" onclick="openModal('img4')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny4.jpg?raw=true"><p>Erinnerung 4</p></div>
+  <div class="card" onclick="openModal('img5')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny5.jpg?raw=true"><p>Erinnerung 5</p></div>
+  <div class="card" onclick="openModal('img6')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny6.jpg?raw=true"><p>Erinnerung 6</p></div>
+  <div class="card" onclick="openModal('img7')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny7.jpg?raw=true"><p>Erinnerung 7</p></div>
+  <div class="card" onclick="openModal('img8')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny8.jpg?raw=true"><p>Erinnerung 8</p></div>
+  <div class="card" onclick="openModal('img9')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny9.jpg?raw=true"><p>Erinnerung 9</p></div>
+  <div class="card" onclick="openModal('img10')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny10.jpg?raw=true"><p>Erinnerung 10</p></div>
+  <div class="card" onclick="openModal('img11')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny11.jpg?raw=true"><p>Erinnerung 11</p></div>
+  <div class="card" onclick="openModal('img12')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny12.jpg?raw=true"><p>Erinnerung 12</p></div>
+  <div class="card" onclick="openModal('img13')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny13.jpg?raw=true"><p>Erinnerung 13</p></div>
+  <div class="card" onclick="openModal('img14')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny14.jpg?raw=true"><p>Erinnerung 14</p></div>
+  <div class="card" onclick="openModal('img15')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny15.jpg?raw=true"><p>Erinnerung 15</p></div>
+  <div class="card" onclick="openModal('img17')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny17.jpg?raw=true"><p>Erinnerung 16</p></div>
+  <div class="card" onclick="openModal('img18')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny18.jpg?raw=true"><p>Erinnerung 17</p></div>
+  <div class="card" onclick="openModal('img19')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny19.jpg?raw=true"><p>Erinnerung 18</p></div>
+  <div class="card" onclick="openModal('img20')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny20.jpg?raw=true"><p>Erinnerung 19</p></div>
+  <div class="card" onclick="openModal('img21')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny21.jpg?raw=true"><p>Erinnerung 20</p></div>
+  <div class="card" onclick="openModal('img22')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny22.jpg?raw=true"><p>Erinnerung 21</p></div>
+  <div class="card" onclick="openModal('img23')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny23.jpg?raw=true"><p>Erinnerung 22</p></div>
+  <div class="card" onclick="openModal('img24')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny24.jpg?raw=true"><p>Erinnerung 23</p></div>
+  <div class="card" onclick="openModal('img25')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny25.jpg?raw=true"><p>Erinnerung 24</p></div>
+  <div class="card" onclick="openModal('img26')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny26.jpg?raw=true"><p>Erinnerung 25</p></div>
+  <div class="card" onclick="openModal('img27')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny27.jpg?raw=true"><p>Erinnerung 26</p></div>
+  <div class="card" onclick="openModal('img28')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny28.jpg?raw=true"><p>Erinnerung 27</p></div>
+  <div class="card" onclick="openModal('img29')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny29.jpg?raw=true"><p>Erinnerung 28</p></div>
+  <div class="card" onclick="openModal('img30')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny30.jpg?raw=true"><p>Erinnerung 29</p></div>
+  <div class="card" onclick="openModal('img31')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny31.jpg?raw=true"><p>Erinnerung 30</p></div>
+  <div class="card" onclick="openModal('img32')"><img src="https://github.com/deejay1905/LoveYou/blob/main/jenny32.jpg?raw=true"><p>Erinnerung 31</p></div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Popup Bild">
+    <p id="modalText"></p>
+    <button onclick="closeModal()">Schließen ❤️</button>
+  </div>
+</div>
+
+<script>
+// Text + Bild für jedes Popup
+const modalContent = {
+  img1:{text:"Unsere Erinnerung 1", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny1.jpg?raw=true"},
+  img2:{text:"Unsere Erinnerung 2", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny2.jpg?raw=true"},
+  img3:{text:"Unsere Erinnerung 3", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny3.jpg?raw=true"},
+  img4:{text:"Unsere Erinnerung 4", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny4.jpg?raw=true"},
+  img5:{text:"Unsere Erinnerung 5", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny5.jpg?raw=true"},
+  img6:{text:"Unsere Erinnerung 6", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny6.jpg?raw=true"},
+  img7:{text:"Unsere Erinnerung 7", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny7.jpg?raw=true"},
+  img8:{text:"Unsere Erinnerung 8", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny8.jpg?raw=true"},
+  img9:{text:"Unsere Erinnerung 9", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny9.jpg?raw=true"},
+  img10:{text:"Unsere Erinnerung 10", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny10.jpg?raw=true"},
+  img11:{text:"Unsere Erinnerung 11", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny11.jpg?raw=true"},
+  img12:{text:"Unsere Erinnerung 12", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny12.jpg?raw=true"},
+  img13:{text:"Unsere Erinnerung 13", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny13.jpg?raw=true"},
+  img14:{text:"Unsere Erinnerung 14", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny14.jpg?raw=true"},
+  img15:{text:"Unsere Erinnerung 15", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny15.jpg?raw=true"},
+  img17:{text:"Unsere Erinnerung 16", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny17.jpg?raw=true"},
+  img18:{text:"Unsere Erinnerung 17", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny18.jpg?raw=true"},
+  img19:{text:"Unsere Erinnerung 18", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny19.jpg?raw=true"},
+  img20:{text:"Unsere Erinnerung 19", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny20.jpg?raw=true"},
+  img21:{text:"Unsere Erinnerung 20", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny21.jpg?raw=true"},
+  img22:{text:"Unsere Erinnerung 21", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny22.jpg?raw=true"},
+  img23:{text:"Unsere Erinnerung 22", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny23.jpg?raw=true"},
+  img24:{text:"Unsere Erinnerung 23", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny24.jpg?raw=true"},
+  img25:{text:"Unsere Erinnerung 24", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny25.jpg?raw=true"},
+  img26:{text:"Unsere Erinnerung 25", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny26.jpg?raw=true"},
+  img27:{text:"Unsere Erinnerung 26", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny27.jpg?raw=true"},
+  img28:{text:"Unsere Erinnerung 27", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny28.jpg?raw=true"},
+  img29:{text:"Unsere Erinnerung 28", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny29.jpg?raw=true"},
+  img30:{text:"Unsere Erinnerung 29", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny30.jpg?raw=true"},
+  img31:{text:"Unsere Erinnerung 30", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny31.jpg?raw=true"},
+  img32:{text:"Unsere Erinnerung 31", img:"https://github.com/deejay1905/LoveYou/blob/main/jenny32.jpg?raw=true"}
+};
+
+function openModal(key){
+  document.getElementById("modalText").innerText = modalContent[key].text;
+  document.getElementById("modalImage").src = modalContent[key].img;
+  document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+  document.getElementById("modal").style.display = "none";
+}
+</script>
+
+</body>
+</html>
